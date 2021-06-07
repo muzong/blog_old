@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head(title)">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title th:replace="${title}">标题</title>
+        <link href="../static/images/002.jpg" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+        <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+        <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+        <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+        <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+        <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+        <link rel="stylesheet" href="../static/css/timeliner.css" th:href="@{/css/timeliner.css}">
+
+
+</head>
+<body>
+<!--css-->
+<div th:fragment="css">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../static/images/002.jpg" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+        <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+        <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+        <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+        <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+        <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+        <link rel="stylesheet" href="../static/css/timeline.css" th:href="@{/css/timeline.css}">
+
+    </head>
+</div>
+
+
+<!--导航栏-->
+<div th:fragment="navigate(n)">
+    <nav class="gird-header">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui olive header item" style="font-family: STSong">牧宗</h2>
+                <div class="right m-item item m-mobile-hide">
+                    <a href="#" th:href="@{/}" class=" m-item item" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
+                    <a href="#" th:href="@{/types/-1}" class=" m-item item" th:classappend="${n==2} ? 'active'"><i class="clone outline icon"></i>分类</a>
+                    <a href="#" th:href="@{/archives}" class=" m-item item" th:classappend="${n==3} ? 'active'"><i class="clock icon"></i>日志</a>
+                    <a href="#" th:href="@{/database}" class=" m-item item" th:classappend="${n==4} ? 'active'"><i class="clock icon"></i>资料库</a>
+                    <a href="#" th:href="@{/about}" class="m-item item" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
+                </div>
+                <div class="right m-item item m-mobile-hide">
+                    <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                        <div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
+                            <input style="color: white" type="text" name="query" placeholder="Search...."
+                                   th:value="${query}">
+                            <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+</div>
+
+
+
+<div  id ="footer">
+
+    <footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+        <!--容器-->
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+
+                <div class="six wide column" >
+                    <div class="m-text-spaced">
+                        <h3>最新推荐</h3>
+                    </div>
+
+                    <div class="ui inverted link list">
+                        <div class="item" th:each="blog : ${recommendedBlogs}">
+                            <h4 class="ui  header" align="center"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-text-thin" th:text="${blog.title}">1</a></h4>
+                        </div>
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="ui inverted link list">
+                            <div class="item"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">前路浩浩荡荡</div>
+                    <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">万物皆可期待</div>
+                </div>
+                <div class="six wide column">
+                    <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系方式</div>
+                    <div class="ui inverted link list">
+                        <div href="#" class="m-text-thin">Email：huhayuwe@163.com</div>
+                        <div href="#" class="m-text-thin">QQ：1779677112</div>
+                        <div href="#" class="m-text-thin">微信:MuZongY</div>
+                    </div>
+                </div>
+            </div>
+            <!--博客运行时间统计-->
+            <div class="ui inverted section divider"></div>
+            <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">博客：<span id="htmer_time" class="item m-text-thin"></span></div>
+        </div>
+        <div align="center" style="text-align:center; vertical-align: center">
+            <a href="https://beian.miit.gov.cn">蜀ICP备2021013617号</a>
+        </div>
+</footer>
+</div>
+</body>
+</html>

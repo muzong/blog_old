@@ -1,0 +1,12 @@
+2021-04-04 13:10:06.688  INFO 15092 --- [restartedMain] com.muzong.blog.BlogApplication          : Starting BlogApplication on DESKTOP-P7TLQIK with PID 15092 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-04-04 13:10:06.690  INFO 15092 --- [restartedMain] com.muzong.blog.BlogApplication          : The following profiles are active: pro
+2021-04-04 13:10:07.709  WARN 15092 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong.blog]' package. Please check your configuration.
+2021-04-04 13:10:07.874  WARN 15092 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong.blog]' package. Please check your configuration.
+2021-04-04 13:10:09.067  WARN 15092 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-04 13:10:09.922  INFO 15092 --- [restartedMain] com.muzong.blog.BlogApplication          : Started BlogApplication in 4.242 seconds (JVM running for 5.517)
+2021-04-04 13:11:51.304  INFO 9260 --- [restartedMain] com.muzong.blog.BlogApplication          : Starting BlogApplication on DESKTOP-P7TLQIK with PID 9260 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-04-04 13:11:51.306  INFO 9260 --- [restartedMain] com.muzong.blog.BlogApplication          : The following profiles are active: pro
+2021-04-04 13:11:51.866  WARN 9260 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong.blog]' package. Please check your configuration.
+2021-04-04 13:11:51.963  WARN 9260 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong.blog]' package. Please check your configuration.
+2021-04-04 13:11:52.658  WARN 9260 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-04 13:11:53.326  INFO 9260 --- [restartedMain] com.muzong.blog.BlogApplication          : Started BlogApplication in 2.595 seconds (JVM running for 3.55)

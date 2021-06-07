@@ -1,0 +1,255 @@
+2021-05-27 01:21:15.694  INFO 1028 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 1028 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-27 01:21:15.699  INFO 1028 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-27 01:21:15.753  INFO 1028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-27 01:21:15.753  INFO 1028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-27 01:21:17.383  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:21:17.383  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:21:17.384  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:21:17.384  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:21:17.384  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:21:17.384  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:21:17.384  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:21:17.385  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-27 01:21:17.976  INFO 1028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-27 01:21:17.983  INFO 1028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-27 01:21:17.983  INFO 1028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-27 01:21:18.054  INFO 1028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-27 01:21:18.054  INFO 1028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2300 ms
+2021-05-27 01:21:19.146  INFO 1028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27 01:21:19.268  INFO 1028 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-27 01:21:20.232  INFO 1028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-27 01:21:20.267  INFO 1028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-27 01:21:20.279  INFO 1028 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 5.15 seconds (JVM running for 6.005)
+2021-05-27 01:21:26.444  INFO 1028 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-27 01:21:26.444  INFO 1028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-27 01:21:26.456  INFO 1028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2021-05-27 01:21:26.518  INFO 1028 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-27 01:21:27.162  INFO 1028 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-27 01:22:52.789  INFO 1028 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-27 01:22:52.790  INFO 1028 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-27 01:22:52.798  INFO 1028 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-27 01:22:53.005  INFO 1028 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 1028 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-27 01:22:53.005  INFO 1028 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-27 01:22:53.209  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:22:53.210  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:22:53.210  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:22:53.210  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:22:53.210  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:22:53.210  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:22:53.210  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 01:22:53.210  WARN 1028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-27 01:22:53.339  INFO 1028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-27 01:22:53.340  INFO 1028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-27 01:22:53.340  INFO 1028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-27 01:22:53.358  INFO 1028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-27 01:22:53.358  INFO 1028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 351 ms
+2021-05-27 01:22:53.823  INFO 1028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27 01:22:53.862  INFO 1028 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-27 01:22:54.082  INFO 1028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-27 01:22:54.095  INFO 1028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-27 01:22:54.099  INFO 1028 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 1.131 seconds (JVM running for 99.826)
+2021-05-27 01:22:54.100  INFO 1028 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-27 17:02:32.542  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 37332 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-27 17:02:32.544  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-27 17:02:32.756  INFO 37332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-27 17:02:32.756  INFO 37332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-27 17:02:36.111  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:02:36.112  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:02:36.112  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:02:36.112  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:02:36.112  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:02:36.112  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:02:36.112  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:02:36.113  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-27 17:02:37.355  INFO 37332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-27 17:02:37.367  INFO 37332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-27 17:02:37.367  INFO 37332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-27 17:02:37.504  INFO 37332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-27 17:02:37.504  INFO 37332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4746 ms
+2021-05-27 17:02:39.525  INFO 37332 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27 17:02:39.675  INFO 37332 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-27 17:02:42.467  INFO 37332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-27 17:02:42.529  INFO 37332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-27 17:02:42.539  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 11.466 seconds (JVM running for 14.17)
+2021-05-27 17:19:56.429  INFO 37332 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-27 17:19:56.692  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 37332 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-27 17:19:56.692  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-27 17:19:56.944  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:56.944  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:56.944  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-27 17:19:57.034  INFO 37332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-27 17:19:57.035  INFO 37332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-27 17:19:57.036  INFO 37332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-27 17:19:57.062  INFO 37332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-27 17:19:57.063  INFO 37332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 367 ms
+2021-05-27 17:19:57.148  WARN 37332 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutController': Unsatisfied dependency expressed through field 'aboutService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutServiceImpl': Unsatisfied dependency expressed through field 'aboutDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutDao' defined in file [E:\无聊\blog\target\classes\com\muzong\dao\AboutDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+2021-05-27 17:19:57.149  INFO 37332 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-27 17:19:57.159  INFO 37332 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-27 17:19:57.301 ERROR 37332 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutController': Unsatisfied dependency expressed through field 'aboutService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutServiceImpl': Unsatisfied dependency expressed through field 'aboutDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutDao' defined in file [E:\无聊\blog\target\classes\com\muzong\dao\AboutDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.muzong.BlogApplication.main(BlogApplication.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutServiceImpl': Unsatisfied dependency expressed through field 'aboutDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutDao' defined in file [E:\无聊\blog\target\classes\com\muzong\dao\AboutDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aboutDao' defined in file [E:\无聊\blog\target\classes\com\muzong\dao\AboutDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1524)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1509)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:595)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:431)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:628)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:218)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$9ac7991c.CGLIB$sqlSessionFactory$1(<generated>)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$9ac7991c$$FastClassBySpringCGLIB$$31cb1432.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$9ac7991c.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\无聊\blog\target\classes\mapper\BlogDao.xml]'. Cause: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:593)
+	... 76 common frames omitted
+Caused by: java.lang.TypeNotPresentException: Type com.muzong.entity.Comment not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.MethodRepository.getReturnType(MethodRepository.java:68)
+	at java.lang.reflect.Method.getGenericReturnType(Method.java:255)
+	at org.apache.ibatis.reflection.TypeParameterResolver.resolveReturnType(TypeParameterResolver.java:48)
+	at org.apache.ibatis.reflection.Reflector.addGetMethod(Reflector.java:140)
+	at org.apache.ibatis.reflection.Reflector.resolveGetterConflicts(Reflector.java:133)
+	at org.apache.ibatis.reflection.Reflector.addGetMethods(Reflector.java:99)
+	at org.apache.ibatis.reflection.Reflector.<init>(Reflector.java:63)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.apache.ibatis.reflection.DefaultReflectorFactory.findForClass(DefaultReflectorFactory.java:42)
+	at org.apache.ibatis.reflection.MetaClass.<init>(MetaClass.java:39)
+	at org.apache.ibatis.reflection.MetaClass.forClass(MetaClass.java:43)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:84)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:67)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:78)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:45)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.<init>(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.<init>(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	... 78 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.muzong.entity.Comment
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 106 common frames omitted
+
+2021-05-27 17:19:58.858  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 37332 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-27 17:19:58.858  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-27 17:19:59.011  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:59.011  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:59.011  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:59.011  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:59.011  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:59.011  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:59.012  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-27 17:19:59.012  WARN 37332 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-27 17:19:59.112  INFO 37332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-27 17:19:59.113  INFO 37332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-27 17:19:59.113  INFO 37332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-27 17:19:59.130  INFO 37332 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-05-27 17:19:59.130  INFO 37332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 270 ms
+2021-05-27 17:19:59.787  INFO 37332 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27 17:19:59.845  INFO 37332 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-27 17:20:00.064  INFO 37332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-27 17:20:00.077  INFO 37332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-27 17:20:00.080  INFO 37332 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 1.25 seconds (JVM running for 1051.712)
+2021-05-27 17:20:00.082  INFO 37332 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

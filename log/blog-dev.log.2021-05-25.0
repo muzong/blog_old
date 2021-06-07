@@ -1,0 +1,778 @@
+2021-05-25 08:16:44.252  INFO 6396 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 6396 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 08:16:44.258  INFO 6396 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 08:16:44.315  INFO 6396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 08:16:44.316  INFO 6396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 08:16:45.812  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:16:45.812  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:16:45.812  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:16:45.812  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:16:45.812  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:16:45.813  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:16:45.813  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:16:45.813  WARN 6396 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 08:16:46.771  INFO 6396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 08:16:46.806  INFO 6396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 08:16:46.806  INFO 6396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 08:16:46.959  INFO 6396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 08:16:46.959  INFO 6396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2641 ms
+2021-05-25 08:16:47.845  WARN 6396 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'comment.avatar' in value "${comment.avatar}"
+2021-05-25 08:16:47.847  INFO 6396 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-25 08:16:47.858  INFO 6396 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-25 08:16:47.868 ERROR 6396 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'comment.avatar' in value "${comment.avatar}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.muzong.BlogApplication.main(BlogApplication.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'comment.avatar' in value "${comment.avatar}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:918)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 23 common frames omitted
+
+2021-05-25 08:18:50.016  INFO 16164 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 16164 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 08:18:50.018  INFO 16164 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 08:18:50.058  INFO 16164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 08:18:50.059  INFO 16164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 08:18:50.770  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:18:50.771  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:18:50.771  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:18:50.771  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:18:50.771  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:18:50.771  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:18:50.771  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:18:50.772  WARN 16164 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 08:18:51.301  INFO 16164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 08:18:51.309  INFO 16164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 08:18:51.309  INFO 16164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 08:18:51.392  INFO 16164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 08:18:51.393  INFO 16164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1334 ms
+2021-05-25 08:18:52.598  INFO 16164 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 08:18:52.708  INFO 16164 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 08:18:53.455  INFO 16164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 08:18:53.523  INFO 16164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 08:18:53.546  INFO 16164 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.939 seconds (JVM running for 4.799)
+2021-05-25 08:19:01.516  INFO 16164 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 08:19:01.516  INFO 16164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 08:19:01.524  INFO 16164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-05-25 08:19:01.570  INFO 16164 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 08:19:02.245  INFO 16164 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 08:21:38.363  WARN 16164 --- [http-nio-8080-exec-8] o.springframework.validation.DataBinder  : Skipping URI variable 'viewDataBaseId' because request contains bind value with same name.
+2021-05-25 08:30:42.431  INFO 956 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 956 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 08:30:42.435  INFO 956 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 08:30:42.513  INFO 956 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 08:30:42.513  INFO 956 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 08:30:43.229  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:30:43.229  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:30:43.229  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:30:43.230  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:30:43.230  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:30:43.230  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:30:43.230  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 08:30:43.230  WARN 956 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 08:30:43.717  INFO 956 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 08:30:43.725  INFO 956 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 08:30:43.725  INFO 956 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 08:30:43.793  INFO 956 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 08:30:43.793  INFO 956 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1279 ms
+2021-05-25 08:30:44.726  INFO 956 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 08:30:44.812  INFO 956 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 08:30:45.123  INFO 956 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 08:30:45.153  INFO 956 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 08:30:45.162  INFO 956 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.364 seconds (JVM running for 4.819)
+2021-05-25 08:30:45.256  INFO 956 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 08:30:45.256  INFO 956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 08:30:45.264  INFO 956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-05-25 08:30:46.753  INFO 956 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 08:30:47.248  INFO 956 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 12:49:42.296  INFO 27340 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 27340 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 12:49:42.299  INFO 27340 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 12:49:42.346  INFO 27340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 12:49:42.346  INFO 27340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 12:49:43.118  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:49:43.118  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:49:43.118  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:49:43.118  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:49:43.118  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:49:43.119  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:49:43.119  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:49:43.119  WARN 27340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 12:49:43.690  INFO 27340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 12:49:43.698  INFO 27340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 12:49:43.699  INFO 27340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 12:49:43.793  INFO 27340 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 12:49:43.793  INFO 27340 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1447 ms
+2021-05-25 12:49:44.890  INFO 27340 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 12:49:44.988  INFO 27340 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 12:49:45.324  INFO 27340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 12:49:45.361  INFO 27340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 12:49:45.371  INFO 27340 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.531 seconds (JVM running for 4.34)
+2021-05-25 12:49:49.533  INFO 27340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 12:49:49.533  INFO 27340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 12:49:49.542  INFO 27340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-05-25 12:49:49.582  INFO 27340 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 12:49:50.230  INFO 27340 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 12:54:33.444  INFO 28520 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 28520 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 12:54:33.446  INFO 28520 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 12:54:33.496  INFO 28520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 12:54:33.497  INFO 28520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 12:54:34.101  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:54:34.102  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:54:34.102  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:54:34.102  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:54:34.102  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:54:34.102  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:54:34.102  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:54:34.102  WARN 28520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 12:54:34.605  INFO 28520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 12:54:34.612  INFO 28520 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 12:54:34.612  INFO 28520 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 12:54:34.682  INFO 28520 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 12:54:34.682  INFO 28520 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1185 ms
+2021-05-25 12:54:35.734  INFO 28520 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 12:54:35.819  INFO 28520 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 12:54:36.125  INFO 28520 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 12:54:36.154  INFO 28520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 12:54:36.164  INFO 28520 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.188 seconds (JVM running for 3.998)
+2021-05-25 12:54:47.087  INFO 28520 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 12:54:47.087  INFO 28520 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 12:54:47.095  INFO 28520 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-05-25 12:54:48.179  INFO 28520 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 12:54:48.702  INFO 28520 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 12:55:49.348  INFO 22172 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 22172 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 12:55:49.350  INFO 22172 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 12:55:49.392  INFO 22172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 12:55:49.392  INFO 22172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 12:55:50.026  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:55:50.026  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:55:50.026  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:55:50.026  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:55:50.026  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:55:50.026  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:55:50.026  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:55:50.027  WARN 22172 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 12:55:50.543  INFO 22172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 12:55:50.551  INFO 22172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 12:55:50.551  INFO 22172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 12:55:50.619  INFO 22172 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 12:55:50.620  INFO 22172 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1227 ms
+2021-05-25 12:55:51.573  INFO 22172 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 12:55:51.665  INFO 22172 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 12:55:51.998  INFO 22172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 12:55:52.033  INFO 22172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 12:55:52.042  INFO 22172 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.201 seconds (JVM running for 4.068)
+2021-05-25 12:55:53.249  INFO 22172 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 12:55:53.249  INFO 22172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 12:55:53.266  INFO 22172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2021-05-25 12:55:53.316  INFO 22172 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 12:55:53.934  INFO 22172 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 12:58:25.220  INFO 26536 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 26536 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 12:58:25.222  INFO 26536 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 12:58:25.271  INFO 26536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 12:58:25.271  INFO 26536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 12:58:25.963  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:58:25.963  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:58:25.963  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:58:25.963  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:58:25.963  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:58:25.964  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:58:25.964  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 12:58:25.964  WARN 26536 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 12:58:26.505  INFO 26536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 12:58:26.512  INFO 26536 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 12:58:26.513  INFO 26536 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 12:58:26.589  INFO 26536 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 12:58:26.590  INFO 26536 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1319 ms
+2021-05-25 12:58:27.597  INFO 26536 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 12:58:27.685  INFO 26536 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 12:58:27.987  INFO 26536 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 12:58:28.017  INFO 26536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 12:58:28.027  INFO 26536 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.217 seconds (JVM running for 3.977)
+2021-05-25 12:58:35.981  INFO 26536 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 12:58:35.981  INFO 26536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 12:58:35.988  INFO 26536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-05-25 12:58:37.369  INFO 26536 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 12:58:37.805  INFO 26536 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 13:15:28.495  WARN 26536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66bdf563 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:33.493  WARN 26536 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@58187cc9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:33.497  WARN 26536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@63423c0d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:34.700  WARN 26536 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c7034e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:38.494  WARN 26536 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20132cb5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:38.498  WARN 26536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6a5dcbeb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:39.701  WARN 26536 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f00ed06 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:43.496  WARN 26536 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20a91420 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:43.499  WARN 26536 --- [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4bd43d46 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:15:44.702  WARN 26536 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b3f683e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-05-25 13:16:11.322  INFO 23576 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 23576 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:16:11.325  INFO 23576 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:16:11.377  INFO 23576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 13:16:11.377  INFO 23576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 13:16:12.018  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:16:12.019  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:16:12.019  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:16:12.019  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:16:12.019  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:16:12.019  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:16:12.019  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:16:12.019  WARN 23576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:16:12.517  INFO 23576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:16:12.525  INFO 23576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:16:12.525  INFO 23576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:16:12.597  INFO 23576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:16:12.597  INFO 23576 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1219 ms
+2021-05-25 13:16:13.591  INFO 23576 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:16:13.687  INFO 23576 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:16:14.009  INFO 23576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:16:14.041  INFO 23576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:16:14.051  INFO 23576 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.203 seconds (JVM running for 4.046)
+2021-05-25 13:16:14.232  INFO 23576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:16:14.232  INFO 23576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 13:16:14.242  INFO 23576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2021-05-25 13:16:15.626  INFO 23576 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 13:16:16.166  INFO 23576 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 13:18:53.818  INFO 22756 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 22756 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:18:53.821  INFO 22756 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:18:53.870  INFO 22756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 13:18:53.870  INFO 22756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 13:18:54.560  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:18:54.561  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:18:54.561  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:18:54.561  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:18:54.561  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:18:54.561  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:18:54.561  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:18:54.561  WARN 22756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:18:55.246  INFO 22756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:18:55.253  INFO 22756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:18:55.253  INFO 22756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:18:55.331  INFO 22756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:18:55.331  INFO 22756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1460 ms
+2021-05-25 13:18:56.304  INFO 22756 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:18:56.392  INFO 22756 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:18:56.729  INFO 22756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:18:56.763  INFO 22756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:18:56.772  INFO 22756 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.425 seconds (JVM running for 4.416)
+2021-05-25 13:19:11.140  INFO 22756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:19:11.141  INFO 22756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 13:19:11.152  INFO 22756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-05-25 13:19:11.194  INFO 22756 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 13:19:12.097  INFO 22756 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 13:20:01.496  INFO 29676 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 29676 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:20:01.498  INFO 29676 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:20:01.542  INFO 29676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 13:20:01.542  INFO 29676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:20:02.160  WARN 29676 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:20:02.653  INFO 29676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:20:02.660  INFO 29676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:20:02.660  INFO 29676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:20:02.729  INFO 29676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:20:02.729  INFO 29676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1186 ms
+2021-05-25 13:20:03.844  INFO 29676 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:20:03.940  INFO 29676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:20:04.257  INFO 29676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:20:04.291  INFO 29676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:20:04.300  INFO 29676 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.279 seconds (JVM running for 4.181)
+2021-05-25 13:20:09.195  INFO 29676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:20:09.195  INFO 29676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 13:20:09.203  INFO 29676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-05-25 13:20:10.612  INFO 29676 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 13:20:11.493  INFO 29676 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 13:22:16.761  INFO 20372 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 20372 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:22:16.763  INFO 20372 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:22:16.806  INFO 20372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 13:22:16.806  INFO 20372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 13:22:17.498  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:22:17.498  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:22:17.498  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:22:17.498  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:22:17.499  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:22:17.499  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:22:17.499  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:22:17.499  WARN 20372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:22:18.041  INFO 20372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:22:18.049  INFO 20372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:22:18.049  INFO 20372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:22:18.168  INFO 20372 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:22:18.168  INFO 20372 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
+2021-05-25 13:22:19.113  INFO 20372 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:22:19.203  INFO 20372 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:22:19.514  INFO 20372 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:22:19.545  INFO 20372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:22:19.553  INFO 20372 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.33 seconds (JVM running for 4.792)
+2021-05-25 13:22:30.681  INFO 20372 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:22:30.682  INFO 20372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 13:22:30.691  INFO 20372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-05-25 13:22:30.705 ERROR 20372 --- [http-nio-8080-exec-1] c.m.hander.ControllerExceptionHandler    : Requst URL : http://127.0.0.1:8080/admin/index，Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:396)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-05-25 13:22:30.708  WARN 20372 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-05-25 13:22:34.475 ERROR 20372 --- [http-nio-8080-exec-4] c.m.hander.ControllerExceptionHandler    : Requst URL : http://127.0.0.1:8080/admin/index，Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:396)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-05-25 13:22:34.475  WARN 20372 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-05-25 13:22:38.720  INFO 20372 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 13:22:39.290  INFO 20372 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 13:23:20.173 ERROR 20372 --- [http-nio-8080-exec-5] c.m.hander.ControllerExceptionHandler    : Requst URL : http://127.0.0.1:8080/admin/index，Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:396)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-05-25 13:23:20.174  WARN 20372 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-05-25 13:24:56.063  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 26188 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:24:56.066  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:24:56.115  INFO 26188 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 13:24:56.115  INFO 26188 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 13:24:56.777  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:24:56.777  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:24:56.777  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:24:56.777  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:24:56.777  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:24:56.777  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:24:56.778  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:24:56.778  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:24:57.408  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:24:57.417  INFO 26188 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:24:57.417  INFO 26188 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:24:57.493  INFO 26188 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:24:57.493  INFO 26188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1378 ms
+2021-05-25 13:24:58.440  INFO 26188 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:24:58.529  INFO 26188 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:24:58.837  INFO 26188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:24:58.867  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:24:58.875  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.218 seconds (JVM running for 4.062)
+2021-05-25 13:25:04.964  INFO 26188 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:25:04.965  INFO 26188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 13:25:04.974  INFO 26188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-05-25 13:25:06.807  INFO 26188 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 13:25:07.313  INFO 26188 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 13:25:07.389 ERROR 26188 --- [http-nio-8080-exec-5] c.m.hander.ControllerExceptionHandler    : Requst URL : http://127.0.0.1:8080/admin/index.html，Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:367)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:110)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:396)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1234)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1016)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-05-25 13:25:07.390  WARN 26188 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-05-25 13:27:35.729  INFO 26188 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:27:35.730  INFO 26188 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-25 13:27:35.737  INFO 26188 --- [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-25 13:27:35.940  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 26188 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:27:35.940  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:27:36.185  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:27:36.309  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:27:36.310  INFO 26188 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:27:36.310  INFO 26188 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:27:36.334  INFO 26188 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:27:36.334  INFO 26188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
+2021-05-25 13:27:36.826  INFO 26188 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:27:36.862  INFO 26188 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:27:37.079  INFO 26188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:27:37.091  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:27:37.096  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 1.193 seconds (JVM running for 162.283)
+2021-05-25 13:27:37.098  INFO 26188 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-25 13:29:01.401  INFO 26188 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:29:01.554  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 26188 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:29:01.554  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:29:01.700  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:29:01.798  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:29:01.799  INFO 26188 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:29:01.799  INFO 26188 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:29:01.814  INFO 26188 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:29:01.814  INFO 26188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 258 ms
+2021-05-25 13:29:02.250  INFO 26188 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:29:02.286  INFO 26188 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:29:02.478  INFO 26188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:29:02.488  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:29:02.492  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 0.962 seconds (JVM running for 247.678)
+2021-05-25 13:29:02.493  INFO 26188 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-25 13:34:41.507  INFO 26188 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:34:41.696  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 26188 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:34:41.696  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:34:41.848  WARN 26188 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:34:41.944  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:34:41.945  INFO 26188 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:34:41.945  INFO 26188 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:34:41.963  INFO 26188 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:34:41.963  INFO 26188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 265 ms
+2021-05-25 13:34:42.398  INFO 26188 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:34:42.514  INFO 26188 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:34:42.785  INFO 26188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:34:42.796  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:34:42.799  INFO 26188 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 1.13 seconds (JVM running for 587.987)
+2021-05-25 13:34:42.801  INFO 26188 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-05-25 13:36:18.997  INFO 31976 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 31976 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:36:19.000  INFO 31976 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:36:19.042  INFO 31976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 13:36:19.043  INFO 31976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 13:36:19.899  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:36:19.899  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:36:19.900  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:36:19.900  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:36:19.900  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:36:19.900  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:36:19.900  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:36:19.900  WARN 31976 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:36:20.544  INFO 31976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:36:20.552  INFO 31976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:36:20.553  INFO 31976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:36:20.634  INFO 31976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:36:20.634  INFO 31976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1591 ms
+2021-05-25 13:36:21.755  INFO 31976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:36:21.882  INFO 31976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:36:22.245  INFO 31976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:36:22.277  INFO 31976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:36:22.287  INFO 31976 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.867 seconds (JVM running for 4.869)
+2021-05-25 13:36:25.925  INFO 31976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:36:25.925  INFO 31976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 13:36:25.932  INFO 31976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-05-25 13:36:37.333  INFO 31976 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 13:36:37.868  INFO 31976 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 13:39:14.512  INFO 30480 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 30480 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 13:39:14.514  INFO 30480 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 13:39:14.565  INFO 30480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 13:39:14.565  INFO 30480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 13:39:15.207  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:39:15.208  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:39:15.208  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:39:15.208  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:39:15.208  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:39:15.208  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:39:15.208  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 13:39:15.209  WARN 30480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 13:39:15.808  INFO 30480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 13:39:15.815  INFO 30480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 13:39:15.816  INFO 30480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 13:39:15.884  INFO 30480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 13:39:15.884  INFO 30480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1318 ms
+2021-05-25 13:39:16.820  INFO 30480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 13:39:16.910  INFO 30480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 13:39:17.223  INFO 30480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 13:39:17.254  INFO 30480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 13:39:17.265  INFO 30480 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.163 seconds (JVM running for 3.951)
+2021-05-25 13:39:32.838  INFO 30480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 13:39:32.838  INFO 30480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 13:39:32.845  INFO 30480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-05-25 13:39:36.196  INFO 30480 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 13:39:36.765  INFO 30480 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 18:47:53.845  INFO 36780 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 36780 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 18:47:53.849  INFO 36780 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 18:47:53.893  INFO 36780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 18:47:53.893  INFO 36780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 18:47:55.487  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:47:55.487  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:47:55.487  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:47:55.487  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:47:55.487  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:47:55.487  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:47:55.487  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:47:55.488  WARN 36780 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 18:47:56.465  INFO 36780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 18:47:56.475  INFO 36780 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 18:47:56.475  INFO 36780 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 18:47:56.603  INFO 36780 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 18:47:56.603  INFO 36780 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2710 ms
+2021-05-25 18:47:58.060  INFO 36780 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 18:47:58.191  INFO 36780 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 18:47:58.499  INFO 36780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 18:47:58.551  INFO 36780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 18:47:58.560  INFO 36780 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 5.469 seconds (JVM running for 7.199)
+2021-05-25 18:48:00.662  INFO 36780 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 18:48:00.662  INFO 36780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 18:48:00.673  INFO 36780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-05-25 18:48:00.712  INFO 36780 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-25 18:48:01.466  INFO 36780 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-25 18:49:12.594  INFO 12576 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 12576 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 18:49:12.596  INFO 12576 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 18:49:12.648  INFO 12576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 18:49:12.649  INFO 12576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 18:49:13.289  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:49:13.289  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:49:13.289  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:49:13.289  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:49:13.289  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:49:13.289  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:49:13.289  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:49:13.290  WARN 12576 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 18:49:13.810  INFO 12576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 18:49:13.817  INFO 12576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 18:49:13.817  INFO 12576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 18:49:13.895  INFO 12576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 18:49:13.895  INFO 12576 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1246 ms
+2021-05-25 18:49:14.961  INFO 12576 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 18:49:15.071  INFO 12576 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 18:49:15.452  INFO 12576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 18:49:15.485  INFO 12576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 18:49:15.494  INFO 12576 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.337 seconds (JVM running for 4.254)
+2021-05-25 18:49:20.944  INFO 12576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 18:49:20.945  INFO 12576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 18:49:20.953  INFO 12576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-05-25 18:50:04.970  INFO 49624 --- [restartedMain] com.muzong.BlogApplication               : Starting BlogApplication on DESKTOP-P7TLQIK with PID 49624 (E:\无聊\blog\target\classes started by MuZong in E:\无聊\blog)
+2021-05-25 18:50:04.973  INFO 49624 --- [restartedMain] com.muzong.BlogApplication               : The following profiles are active: dev
+2021-05-25 18:50:05.022  INFO 49624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-25 18:50:05.022  INFO 49624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-25 18:50:05.663  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'aboutDao' and 'com.muzong.dao.AboutDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:50:05.663  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'archiveDao' and 'com.muzong.dao.ArchiveDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:50:05.663  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'blogDao' and 'com.muzong.dao.BlogDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:50:05.663  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'commentDao' and 'com.muzong.dao.CommentDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:50:05.663  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'databaseDao' and 'com.muzong.dao.DatabaseDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:50:05.663  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'typeDao' and 'com.muzong.dao.TypeDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:50:05.663  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.muzong.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2021-05-25 18:50:05.664  WARN 49624 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.muzong]' package. Please check your configuration.
+2021-05-25 18:50:06.223  INFO 49624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-25 18:50:06.230  INFO 49624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-25 18:50:06.245  INFO 49624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-25 18:50:06.319  INFO 49624 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-25 18:50:06.319  INFO 49624 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1296 ms
+2021-05-25 18:50:07.423  INFO 49624 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-25 18:50:07.538  INFO 49624 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-25 18:50:07.920  INFO 49624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-25 18:50:07.967  INFO 49624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-25 18:50:07.978  INFO 49624 --- [restartedMain] com.muzong.BlogApplication               : Started BlogApplication in 3.507 seconds (JVM running for 4.549)
+2021-05-25 18:50:08.090  INFO 49624 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-25 18:50:08.090  INFO 49624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-25 18:50:08.100  INFO 49624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms

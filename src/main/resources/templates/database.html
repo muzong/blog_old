@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="template :: head(~{::title})">
+    <title>数据库</title>
+</head>
+<body>
+
+<!--导航-->
+<div th:replace="template :: navigate(4)"></div>
+
+
+<!--中间内容-->
+<div class="m-margin-top-maxxx animated fadeIn">
+    <div class="ui m-opacity container">
+
+        <div class="ui segment m-opacity">
+            <div class="ui container" align="center">
+                <div class="ui labeled button m-margin-tb-tiny" >
+                    <a href="#resource1" class="ui basic teal button" >学习</a>
+                </div>
+                <div class="ui labeled button m-margin-tb-tiny" >
+                    <a href="#resource2" class="ui basic teal button" >文档</a>
+                </div>
+                <div class="ui labeled button m-margin-tb-tiny" >
+                    <a href="#resource3" class="ui basic teal button" >工具</a>
+                </div>
+
+                <a onclick="addResource()" class="ui red basic button m-margin-tb-tiny">添加资源</a>
+
+            </div>
+        </div>
+
+
+        <!--资源区域-->
+        <div >
+            <div class="ui top mini attached blue m-opacity segment box-shadow-max">
+                <div class="ui m-padded-tb-large">
+                    <div class="ui stackable m-opacity grid">
+
+                        <h2 id="resource1" style="margin: 0 auto" class="ui header">
+                            <i class="book icon"></i>
+                            <div class="content">
+                                <span>学习</span>
+                            </div>
+                        </h2>
+
+
+                        <div class="ui mini  four cards m-margin-top grid" style="width: 6000px" >
+
+                            <a href="https://www.bilibili.com/" th:href="${learn.dataBaseUrl}" target="_blank" class="orange  card"  th:each="learn:${learn}">
+                                <div class="content" >
+                                    <div class="left" style="font-size: medium;font-weight: bold;color: #2C7EEA" th:text="${learn.dataBaseTitle}">B站</div>
+                                    <div class="meta" style="" th:text="${learn.dataBaseType}">视屏类</div>
+                                    <div class="description"th:text="${learn.dataBaseContent}">众所周知，B站是一个学习网站</div>
+                                </div>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                    <div class="ui stackable m-opacity grid">
+
+                        <h2 id="resource2" style="margin: 0 auto" class="ui header">
+                            <i class="book icon"></i>
+                            <div class="content">
+                                <span>文档</span>
+                            </div>
+                        </h2>
+
+
+                        <div class="ui mini  four cards m-margin-top grid" style="width: 6000px" >
+
+                            <a href="https://www.bilibili.com/" th:href="${doc.dataBaseUrl}" target="_blank" class="orange  card"  th:each="doc:${doc}">
+                                <div class="content" >
+                                    <div class="left" style="font-size: medium;font-weight: bold;color: #2C7EEA" th:text="${doc.dataBaseTitle}">B站</div>
+                                    <div class="meta" style="" th:text="${doc.dataBaseType}">视屏类</div>
+                                    <div class="description"th:text="${doc.dataBaseContent}">众所周知，B站是一个学习网站</div>
+                                </div>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                    <div class="ui stackable m-opacity grid">
+
+                        <h2 id="resource3" style="margin: 0 auto" class="ui header">
+                            <i class="book icon"></i>
+                            <div class="content">
+                                <span>工具</span>
+                            </div>
+                        </h2>
+
+
+                        <div class="ui mini  four cards m-margin-top grid" style="width: 6000px" >
+
+                            <a href="https://www.bilibili.com/" th:href="${tool.dataBaseUrl}" target="_blank" class="orange  card"  th:each="tool:${tool}">
+                                <div class="content" >
+                                    <div class="left" style="font-size: medium;font-weight: bold;color: #2C7EEA" th:text="${tool.dataBaseTitle}">B站</div>
+                                    <div class="meta" style="" th:text="${tool.dataBaseType}">视屏类</div>
+                                    <div class="description"th:text="${tool.dataBaseContent}">众所周知，B站是一个学习网站</div>
+                                </div>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!--弹框内容-->
+<div class="ui modal">
+    <form action="#" method="post" th:action="@{/database}" class="ui segment form">
+        <input type="hidden" name="viewDataBaseId" th:value="*{viewDataBaseId}">
+        <div class="two fields">
+            <div class="field">
+                <label>资源名称</label>
+                <input name="viewDataBaseTitle" type="text" placeholder="资源名称" >
+            </div>
+            <div class="field">
+                <label>资源地址</label>
+                <input name="viewDataBaseUrl" type="text" placeholder="资源地址" >
+            </div>
+        </div>
+        <div class="two fields">
+
+            <div class="field">
+                <label>资源简介</label>
+                <input name="viewDataBaseContent" type="text" placeholder="简介"  >
+            </div>
+            <div class="field">
+                <label>资源分类</label>
+                <input name="viewDataBaseType" type="text" placeholder="分类" >
+            </div>
+        </div>
+
+
+        <div class="actions" align="center">
+            <div class="ui black deny button">
+                取消
+            </div>
+            <button style="width:70px" class="ui positive submit icon button">
+                提交
+            </button>
+        </div>
+
+        <div style="text-align: center;margin-top: 10px;color: blue">注：添加成功后，经管理员审核通过，即可在该页面查看添加的资源</div>
+
+    </form>
+
+
+</div>
+
+
+<br>
+<br>
+
+
+<!--底部栏-->
+<div th:insert="~{template :: #footer}"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="../static/lib/timeline/timeline.js" th:src="@{/lib/timeline/timeline.js}"></script>
+<script src="../static/lib/waypoints/jquery.waypoints.min.js"
+        th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+
+
+<script>
+
+ $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-show');
+    });
+
+
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+
+    // resourceName  resourceAddress  firstType  secondType
+    // 非空校验
+    $('.ui.form').form({
+        fields : {
+            title : {
+                identifier: 'resourceName',
+                rules: [{
+                    type : 'empty',
+                    prompt: '标题：请输入资源名称'
+                }]
+            },
+            content1 : {
+                identifier: 'resourceAddress',
+                rules: [{
+                    type : 'empty',
+                    prompt: '标题：请输入资源地址'
+                }]
+            },
+            content2 : {
+                identifier: 'firstType',
+                rules: [{
+                    type : 'empty',
+                    prompt: '标题：请输入一级分类'
+                }]
+            },
+            content3 : {
+                identifier: 'secondType',
+                rules: [{
+                    type : 'empty',
+                    prompt: '标题：请输入二级分类'
+                }]
+            },
+        }
+    });
+
+    //消息提示关闭初始化
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
+
+
+
+
+            function addResource() {
+        $(".ui.modal")
+            .modal({ //各种回调方法
+                onShow: function () {
+                    console.log("正在显示");
+                },
+                onVisible: function () {
+                    console.log("完全显示");
+                },
+                onHide: function () {
+                    console.log("开始隐藏");
+                },
+                onHidden: function () {
+                    console.log("完全隐藏");
+                },
+                onApprove:function () { //单击确认按钮
+                    console.log("确认");
+                    window.location.href=url;
+
+                },
+                onDeny:function () {  //单击取消按钮
+                    console.log("拒绝")
+                }
+            })
+            .modal("show");
+        return false;
+
+    }
+
+
+
+     // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2021, 0o2, 25, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+            + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+            + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+
+
+
+
+</script>
+</body>
+</html>

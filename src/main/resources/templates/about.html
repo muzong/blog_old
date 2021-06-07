@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="template :: head(~{::title})">
+    <title>关于我</title>
+</head>
+<body>
+
+<!--导航-->
+<div th:replace="template :: navigate(5)"></div>
+
+<!--顶部背景图片-->
+<div class="m-bg-type_outer" style="width: 100%;height: 40%">
+    <img src="../static/images/002.jpg" th:src="@{/images/002.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <div class="m-bg-class_cover">
+        <div class="ui container" style="position: relative ;bottom: -540px;">
+            <div class="m-font-size-title" align="center" style="font-family:'STXingkai'">关于我</div>
+            <div class="m-font-size-text-init-title m-margin-top" align="center">遇到的事都是需要用心体验的</div>
+        </div>
+    </div>
+</div>
+
+<!--个人资料描述-->
+<div class="ui container m-opacity box-shadow-max">
+    <div class="ui segment m-margin-" align="center">
+        <div class="m-margin-top-large" align="center">
+            <img class="ui circular image" align="center" src="../static/images/me.jpg" th:src="@{/images/me.jpg}" style="width: 150px;height: 150px;">
+        </div>
+    <div class="m-margin-top-small" style="font-size: x-large;font-family: STSong" align="center">牧宗</div>
+
+        <div class="" align="center">
+            <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+            <a href="#" class="ui qq circular icon button" data-content="1779677112" data-position="bottom center"><i class="qq icon"></i></a>
+            <a href="https://github.com/muzong" target="_blank" class="ui github circular icon button" data-content="点击跳转GitHub" data-position="bottom center"><i class="github icon"></i></a>
+            <a href="#" class="ui email circular icon button" data-content="huhayuwe@163.com" data-position="bottom center"><i class="envelope  icon"></i></a>
+        </div>
+
+        <div class="ui wechat-qr flowing popup transition hidden">
+            <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="ui rounded image" style="width: 110px">
+            <div align="center">微信</div>
+        </div>
+        <div class="ui qq-qr flowing popup transition hidden">
+            <img src="../static/images/qq.png" th:src="@{/images/qq.png}" alt="" class="ui rounded image" style="width: 110px">
+            <div align="center">QQ</div>
+        </div>
+        <hr class="m-margin-top-small" style="width: 30%">
+        <br>
+
+
+        <hr class="m-margin-top-large">
+        <br>
+        <div id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large"
+             th:utext="${about.content}">
+
+           <h2>sasdasd</h2>
+        </div>
+        <div>
+            <h4 th:text="${#dates.format(about.createTime,'yyyy-MM-dd')}">
+                123123
+            </h4>
+        </div>
+
+
+    <!--<div class="hiddenDiv"></div>-->
+    </div>
+</div>
+
+
+
+
+<div>
+
+</div>
+
+
+
+<!--底部栏-->
+<div th:insert="~{template :: #footer}"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+<script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+<script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+<script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+<script src="../static/lib/waypoints/jquery.waypoints.min.js"
+        th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+
+  <script>
+      // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+
+      $('#blog-message').load(/*[[@{/footer/blogmessage}]]*/"/footer/blogmessage");
+
+
+   $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-show');
+    });
+
+    // 显示公众号
+    $('.tencent').popup({
+        popup : $('.tencent-qr'),
+        position: 'bottom center'
+    });
+
+    // 显示微信
+    $('.wechat').popup({
+        popup : $('.wechat-qr'),
+        position: 'bottom center'
+    });
+
+    // 显示QQ
+    $('.qq').popup({
+        popup : $('.qq-qr'),
+        position: 'bottom center'
+    });
+
+    // 显示邮箱
+    $('.email').popup();
+
+    // 显示CSDN
+    $('.csdn').popup();
+
+      // 显示github
+      $('.github').popup();
+
+
+
+
+ // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2021, 0o2, 25, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+            + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+            + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+
+  </script>
+</body>
+</html>

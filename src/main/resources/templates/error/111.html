@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间轴</title>
+    <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!--导航-->
+<nav class="gird-header">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui olive header item" style="font-family: STSong">牧宗</h2>
+            <div class="right m-item item m-mobile-hide">
+                <a href="#" th:href="@{/}" class=" m-item item"><i class="home icon"></i>首页</a>
+                <a href="#" th:href="@{/types/-1}" class="m-item item"><i class="clone outline icon"></i>分类</a>
+                <a href="#" th:href="@{/archives}" class="active m-item item"><i class="clock icon"></i>日志</a>
+                <a href="#" th:href="@{/database}" class="m-item item"><i class="clock icon"></i>资料库</a>
+                <a href="#" th:href="@{/about}" class="m-item item"><i class="info icon"></i>关于我</a>
+            </div>
+            <div class="right m-item item m-mobile-hide">
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
+                        <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--时间轴内容-->
+
+
+<!--  <div class="mini doc-container m-padded-tb-massivex m-opacity" id="doc-container">-->
+<!--      <th:block >-->
+<!--        <section class=" timeline">-->
+<!--          <ul>-->
+<!--            <li class="m-padded-tb-hugex" th:each="allArchives : ${allArchives}">-->
+<!--              <div>-->
+<!--                <time th:text="${#dates.format(allArchives.createTime,'yyyy-MM-dd hh:mm:ss')}">2021/01/01</time>-->
+<!--                <div class="scientist" >-->
+<!--                      <h3 class="state" style="text-align:center;font-size: 16px;color: #000;" th:text="${allArchives.content}">内容</h3>-->
+<!--                  <img src="../static/images/002.jpg" th:src="@{${allArchives.picture}}" alt="" class="ui m-bg image"-->
+<!--                       style="width: 100%;height: 100%">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </li>-->
+
+<!--          </ul>-->
+<!--        </section>-->
+<!--      </th:block>-->
+<!--  </div>-->
+
+<div id="waypoint" class="mini doc-container m-padded-tb-massivex m-opacity" id="doc-container">
+    <th:block >
+        <section class="cd-timeline js-cd-timeline">
+            <div class="container max-width-lg cd-timeline__container">
+                <div class="cd-timeline__block"th:each="allArchives : ${allArchives}">
+                    <div class="cd-timeline__img cd-timeline__img--picture">
+                        <img src="assets/img/cd-icon-picture.svg" alt="Picture">
+                    </div> <!-- cd-timeline__img -->
+
+                    <div class="cd-timeline__content text-component">
+                        <p class="color-contrast-medium" th:text="${allArchives.content}">L ui ut.</p>
+
+                        <div class="flex justify-between items-center">
+                            <span class="cd-timeline__date" th:text="${#dates.format(allArchives.createTime,'yyyy-MM-dd hh:mm:ss')}">Jan 14</span>
+                        </div>
+                    </div> <!-- cd-timeline__content -->
+                </div> <!-- cd-timeline__block -->
+
+                <div class="cd-timeline__block">
+                    <!-- ... -->
+                </div> <!-- cd-timeline__block -->
+            </div>
+        </section> <!-- cd-timeline -->
+    </th:block></div>
+
+
+
+
+
+<!--置顶图标-->
+<div id="toolbar" class="m-padded-tb-large m-fixed m-right-bottom">
+    <a href="#" class="ui teal icon button"><i class="chevron up icon"></i> </a>
+</div>
+
+
+<!--底部栏-->
+<footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+    <!--容器-->
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+
+            <div class="six wide column" >
+                <div class="ui inverted link list">
+                    <div class="item" th:each="blog : ${recommendedBlog}">
+
+                        <h4 class="ui  header" align="center"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-text-thin" th:text="${blog.title}">最新博客</a></h4>
+                    </div>
+                </div>
+
+                <div class="four wide column">
+                    <div class="ui inverted link list">
+                        <div class="item"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">前路浩浩荡荡</div>
+                <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">万物皆可期待</div>
+
+            </div>
+            <div class="six wide column">
+                <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系方式</div>
+                <div class="ui inverted link list">
+                    <div href="#" class="m-text-thin">Email：huhayuwe@163.com</div>
+                    <div href="#" class="m-text-thin">QQ：1779677112</div>
+                    <div href="#" class="m-text-thin">微信:MuZongY</div>
+                </div>
+            </div>
+
+        </div>
+        <!--博客运行时间统计-->
+        <div class="ui inverted section divider"></div>
+        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">博客：<span id="htmer_time" class="item m-text-thin"></span></div>
+    </div>
+    </div>
+    </div>
+
+
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="../static/lib/timeline/timeline.js" th:src="@{/lib/timeline/timeline.js}"></script>
+<script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+
+
+
+<script>
+
+
+
+
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                $('#toolbar').show(100);
+            } else {
+                $('#toolbar').hide(500);
+            }
+            console.log('Scrolled to waypoint!  ' + direction);
+        }
+    })
+
+    // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+
+    $('#blog-message').load(/*[[@{/footer/blogmessage}]]*/"/footer/blogmessage");
+
+ $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-show');
+    });
+
+     // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2021, 02, 25, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+            + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+            + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+
+
+  </script>
+</body>
+</html>

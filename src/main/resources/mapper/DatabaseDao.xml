@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.muzong.dao.DatabaseDao">
+
+
+
+
+    <select id="getDataBaseById" resultType="com.muzong.entity.Database">
+        select dataBaseId,dataBaseUrl,dataBaseTitle,dataBaseContent,databaseType from blog.t_database where dataBaseId = #{databaseId}
+    </select>
+
+    <!--查询所有资源-->
+
+    <select id="getAllDatabase" resultType="com.muzong.entity.Database">
+        select *from blog.t_database
+    </select>
+
+    <!--新增保存资源-->
+<insert id="saveDatabase" parameterType="com.muzong.entity.Database">
+    insert into blog.t_database  (dataBaseId,dataBaseContent,dataBaseUrl,dataBaseType,dataBaseTitle)
+    values (#{dataBaseId},#{dataBaseContent},#{dataBaseUrl},#{dataBaseType},#{dataBaseTitle})
+</insert>
+
+    <!--编辑修改资源-->
+<update id="updateDatabase" parameterType="com.muzong.entity.Database">
+    update blog.t_database set
+            dataBaseType=#{dataBaseType},
+            dataBaseContent=#{dataBaseContent}
+,dataBaseTitle=#{dataBaseTitle},dataBaseUrl=#{dataBaseUrl} where dataBaseId=#{dataBaseId}
+</update>
+    <!--删除资源-->
+
+    <delete id="deleteDatabase" >
+        delete from blog.t_database where dataBaseId=#{databaseId}
+    </delete>
+
+    <select id="getViewDatabaseList" resultType="com.muzong.entityAdd.ViewDatabase">
+        select *from blog.t_viewdatabase
+    </select>
+
+    <insert id="saveViewDatabase" parameterType="com.muzong.entityAdd.ViewDatabase">
+        insert into blog.t_viewdatabase  (viewDataBaseId,viewDataBaseContent,viewDataBaseUrl,viewDataBaseType,viewDataBaseTitle)
+        values (#{viewDataBaseId},#{viewDataBaseContent},#{viewDataBaseUrl},#{viewDataBaseType},#{viewDataBaseTitle});
+    </insert>
+
+    <delete id="deleteViewDatabase" >
+        delete from blog.t_viewdatabase where viewDataBaseId=#{viewDataBaseId}
+    </delete>
+
+    <select id="getViewDataBaseById" resultType="com.muzong.entityAdd.ViewDatabase">
+        select viewDataBaseId,viewDataBaseUrl,viewDataBaseTitle,viewDataBaseContent,viewDataBaseType from blog.t_viewdatabase where viewDataBaseId = #{viewDataBaseId}
+    </select>
+
+    <insert id="ConversionViewDatabase" parameterType="com.muzong.entityAdd.ViewDatabase">
+        insert into blog.t_database  (dataBaseId,dataBaseContent,dataBaseUrl,dataBaseType,dataBaseTitle)
+        values (#{viewDataBaseId},#{viewDataBaseContent},#{viewDataBaseUrl},#{viewDataBaseType},#{viewDataBaseTitle})
+    </insert>
+
+    <update id="updateViewDatabase" parameterType="com.muzong.entityAdd.ViewDatabase">
+        update blog.t_viewdatabase set
+                viewDataBaseType=#{viewDataBaseType},
+                viewDataBaseContent=#{viewDataBaseContent}
+                ,viewDataBaseTitle=#{viewDataBaseTitle},
+                viewDataBaseUrl=#{viewDataBaseUrl} where viewDataBaseId=#{viewDataBaseId}
+    </update>
+
+    <select id="getViewDataBaseTypeList" resultType="com.muzong.entity.DataBaseType">
+        select viewDataBaseTypeId, viewDataBaseTypeName  from blog.t_viewdatabasetype
+    </select>
+
+    <delete id="deleteViewDataBaseType" >
+        delete  from t_viewdatabasetype where viewDataBaseTypeId=#{viewDataBaseTypeId}
+    </delete>
+    <update id="updateViewDataBaseType" parameterType="com.muzong.entity.DataBaseType">
+        update blog.t_viewdatabasetype set viewDataBaseTypeName =#{viewDataBaseTypeName}
+        where blog.t_viewdatabasetype.viewDataBaseTypeId=#{viewDataBaseTypeId}
+    </update>
+    <select id="getDataBaseTypeById" resultType="com.muzong.entity.DataBaseType">
+        select viewDataBaseTypeId,viewDataBaseTypeName from t_viewdatabasetype where viewDataBaseTypeId=#{viewDataBaseTypeId}
+    </select>
+
+    <insert id="saveDataBaseType" parameterType="com.muzong.entity.DataBaseType">
+
+        insert into blog.t_viewdatabasetype(viewDataBaseTypeId,viewDataBaseTypeName)
+            values (#{viewDataBaseTypeId},#{viewDataBaseTypeName})
+    </insert>
+
+    <select id="getviewdatabsebyname" resultType="com.muzong.entity.Database">
+         select dataBaseUrl,dataBaseTitle,dataBaseContent,dataBaseType from blog.t_database,blog.t_viewdatabasetype
+        where blog.t_database.dataBaseType =blog.t_viewdatabasetype.viewDataBaseTypeName
+          and blog.t_database.dataBaseType=#{viewDataBaseTypeName}
+    </select>
+</mapper>

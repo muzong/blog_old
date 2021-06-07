@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="template :: head(~{::title})">
+  <title>日志</title>
+</head>
+<body>
+
+<!--导航-->
+<div th:replace="template :: navigate(3)"></div>
+
+<!--时间轴内容-->
+
+
+  <div class="mini doc-container m-padded-tb-massivex  m-opacity " id="doc-container">
+      <th:block >
+        <div id="timeline" class="timeline-container" >
+          <div class="timeline-wrapper">
+
+            <h4>点击右边伸缩可展开内容</h4>
+            <button class="blue timeline-time m-padded-tb-large m-fixed m-right">伸缩内容</button>
+
+
+            <dl class="timeline-series m-padded-tb-large" th:each="allArchives:${allArchives} " >
+
+
+              <div>
+                <dt class="timeline-event" id="${allArchives.id}" ><a th:text="${#dates.format(allArchives.createTime,'yyyy-MM-dd ')}">时间</a></dt>
+              </div>
+
+              <dd class=" ui stackable timeline-event-content m-font-size-archives " id="${allArchives.id}EX" >
+                <p th:text="${allArchives.content}" >Content about the event goes here.Content about the event goes here.Content about the event goes here.Content about the event goes here.Content about the event goes here.Content about the event goes here.Content about the event goes here.Content about the event goes here.</p>
+                <div>
+                  <img src="https://pic4.zhimg.com/80/v2-f0fcb1563b643573aef48f9e66974b10_720w.jpg?source=1940ef5c  " th:src="@{${allArchives.picture}}" alt="" class="ui  image"
+                  style="width: 200px"
+                  >
+                </div>
+              </dd>
+
+            </dl>
+          </div>
+          <br class="clear">
+        </div>
+      </th:block>
+  </div>
+
+  <!--置顶图标-->
+  <div id="toolbar" class="m-padded-tb-large m-fixed m-right-bottom">
+    <a href="#" class="ui teal icon button"><i class="chevron up icon"></i> </a>
+  </div>
+
+<!--底部栏-->
+<div th:replace="template :: #footer"></div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script type="text/javascript" src="../static/js/timeliner.min.js" th:src="@{/js/timeliner.min.js}" ></script>
+
+  <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+
+
+
+  <script>
+
+    $(document).ready(function() {
+                $.timeliner({});
+        });
+
+
+
+
+
+    // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+
+    $('#blog-message').load(/*[[@{/footer/blogmessage}]]*/"/footer/blogmessage");
+
+ $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-show');
+    });
+
+     // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = [0, 0, 0, 0, 0];
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2021, 0o2, 25, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+            + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+            + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+
+
+  </script>
+</body>
+</html>
